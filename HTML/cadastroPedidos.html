@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Pedido de Venda de Veículo</title>
+    <title>Cadastro de Compra de Veículo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,18 +35,7 @@
             margin-bottom: 5px;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        input[type="number"] {
+        select, input[type="text"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -70,39 +59,37 @@
 </head>
 <body>
     <div class="container">
-        <h1>Cadastro de Pedido de Venda de Veículo</h1>
+        <h1>Cadastro de Compra de Veículo</h1>
         
-        <form>
-            <h2>Dados do Cliente</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required>
-
-            <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" required>
-
-            <h2>Dados do Pedido</h2>
-            <label for="veiculo">Veículo:</label>
+        <form action="#" method="post">
+            <label for="veiculo">Selecione o Veículo:</label>
             <select id="veiculo" name="veiculo" required>
                 <option value="">Selecione um Veículo</option>
-                <option value="Ford Fiesta">Ford Fiesta</option>
-                <option value="Chevrolet Cruze">Chevrolet Cruze</option>
-                <option value="Toyota Corolla">Toyota Corolla</option>
-                <!-- Adicione mais opções conforme necessário -->
+                <option value="30000">Carro A - R$ 30,000</option>
+                <option value="25000">Carro B - R$ 25,000</option>
+                <option value="40000">Carro C - R$ 40,000</option>
+                <option value="35000">Carro D - R$ 35,000</option>
+                <option value="28000">Carro E - R$ 28,000</option>
+                <option value="38000">Carro F - R$ 38,000</option>
+                <option value="32000">Carro G - R$ 32,000</option>
+                <option value="37000">Carro H - R$ 37,000</option>
+                <option value="29000">Carro I - R$ 29,000</option>
+                <option value="42000">Carro J - R$ 42,000</option>
             </select>
 
-            <label for="preco">Preço:</label>
-            <input type="number" id="preco" name="preco" step="0.01" required>
+            
 
-            <label for="data">Data da Venda:</label>
-            <input type="text" id="data" name="data" placeholder="DD/MM/AAAA" required>
+            <label for="forma-pagamento">Forma de Pagamento:</label>
+            <select id="forma-pagamento" name="forma-pagamento" required>
+                <option value="">Selecione a Forma de Pagamento</option>
+                <option value="financiamento">Financiamento</option>
+                <option value="cartao-credito">Cartão de Crédito</option>
+                <option value="pix">PIX</option>
+            </select>
+            <label for="data">Data:</label>
+            <input type="date" required>
 
-            <input type="submit" value="Cadastrar Pedido">
+            <input type="submit" value="Cadastrar Compra">
         </form>
     </div>
 </body>
